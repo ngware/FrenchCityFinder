@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FCFCityFinder.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    FCFCityFinder *cityFinder = [FCFCityFinder sharedManager];
+    
+    NSArray *cities = [cityFinder getCitiesFromZipcode:@"75015"];
+    
+    NSLog(@"Ville : %@ (%@)", [cities objectAtIndex:0], cities);
 }
 
 - (void)didReceiveMemoryWarning {

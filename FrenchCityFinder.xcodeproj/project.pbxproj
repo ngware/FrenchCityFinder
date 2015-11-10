@@ -16,6 +16,9 @@
 		373188851BECAAE200286102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373188831BECAAE200286102 /* LaunchScreen.storyboard */; };
 		373188901BECAAE200286102 /* FrenchCityFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3731888F1BECAAE200286102 /* FrenchCityFinderTests.m */; };
 		3731889B1BECAAE200286102 /* FrenchCityFinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3731889A1BECAAE200286102 /* FrenchCityFinderUITests.m */; };
+		373188AA1BECABC800286102 /* FCFCityFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 373188A91BECABC800286102 /* FCFCityFinder.m */; };
+		373188AC1BECACB900286102 /* base_officielle_codes_postaux_-_09102015.csv in Resources */ = {isa = PBXBuildFile; fileRef = 373188AB1BECACB900286102 /* base_officielle_codes_postaux_-_09102015.csv */; };
+		373188AF1BECB03100286102 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 373188AE1BECB03100286102 /* CHCSVParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		373188961BECAAE200286102 /* FrenchCityFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchCityFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3731889A1BECAAE200286102 /* FrenchCityFinderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrenchCityFinderUITests.m; sourceTree = "<group>"; };
 		3731889C1BECAAE200286102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373188A81BECABC800286102 /* FCFCityFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFCityFinder.h; sourceTree = "<group>"; };
+		373188A91BECABC800286102 /* FCFCityFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFCityFinder.m; sourceTree = "<group>"; };
+		373188AB1BECACB900286102 /* base_officielle_codes_postaux_-_09102015.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "base_officielle_codes_postaux_-_09102015.csv"; sourceTree = "<group>"; };
+		373188AD1BECB03100286102 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		373188AE1BECB03100286102 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		373188711BECAAE200286102 /* FrenchCityFinder */ = {
 			isa = PBXGroup;
 			children = (
+				373188AB1BECACB900286102 /* base_officielle_codes_postaux_-_09102015.csv */,
 				373188751BECAAE200286102 /* AppDelegate.h */,
 				373188761BECAAE200286102 /* AppDelegate.m */,
 				373188781BECAAE200286102 /* ViewController.h */,
@@ -113,6 +122,10 @@
 				373188861BECAAE200286102 /* Info.plist */,
 				3731887E1BECAAE200286102 /* FrenchCityFinder.xcdatamodeld */,
 				373188721BECAAE200286102 /* Supporting Files */,
+				373188A81BECABC800286102 /* FCFCityFinder.h */,
+				373188A91BECABC800286102 /* FCFCityFinder.m */,
+				373188AD1BECB03100286102 /* CHCSVParser.h */,
+				373188AE1BECB03100286102 /* CHCSVParser.m */,
 			);
 			path = FrenchCityFinder;
 			sourceTree = "<group>";
@@ -249,6 +262,7 @@
 				373188851BECAAE200286102 /* LaunchScreen.storyboard in Resources */,
 				373188821BECAAE200286102 /* Assets.xcassets in Resources */,
 				3731887D1BECAAE200286102 /* Main.storyboard in Resources */,
+				373188AC1BECACB900286102 /* base_officielle_codes_postaux_-_09102015.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				373188801BECAAE200286102 /* FrenchCityFinder.xcdatamodeld in Sources */,
+				373188AA1BECABC800286102 /* FCFCityFinder.m in Sources */,
+				373188AF1BECB03100286102 /* CHCSVParser.m in Sources */,
 				3731887A1BECAAE200286102 /* ViewController.m in Sources */,
 				373188771BECAAE200286102 /* AppDelegate.m in Sources */,
 				373188741BECAAE200286102 /* main.m in Sources */,
@@ -500,6 +516,7 @@
 				373188A11BECAAE200286102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		373188A21BECAAE200286102 /* Build configuration list for PBXNativeTarget "FrenchCityFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +525,7 @@
 				373188A41BECAAE200286102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		373188A51BECAAE200286102 /* Build configuration list for PBXNativeTarget "FrenchCityFinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +534,7 @@
 				373188A71BECAAE200286102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
