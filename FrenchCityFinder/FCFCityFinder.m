@@ -20,6 +20,7 @@
 - (id)init {
     
     if (self = [super init]) {
+        _zipCodeDataBase = nil;
     }
     return self;
 }
@@ -58,8 +59,10 @@
     
     NSArray *cities = nil;
     
-    [self initData];
-    
+    if (_zipCodeDataBase == nil) {
+        [self initData];
+    }
+
     if (zipCode.length == 5) {
         NSString *citiesString = [_zipCodeDataBase objectForKey:zipCode];
         

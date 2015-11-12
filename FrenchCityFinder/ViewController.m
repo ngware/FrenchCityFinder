@@ -32,15 +32,23 @@
     
     executionTime = [methodFinish timeIntervalSinceDate:methodStart];
     NSLog(@"Fast method executionTime = %f", executionTime);
-    NSLog(@"Ville : %@ (%@)", [cities objectAtIndex:0], cities);
+    NSLog(@"Ville : %@", cities);
     
     methodStart = [NSDate date];
     cities = [cityFinder getCitiesFromZipcode:@"37000"];
     methodFinish = [NSDate date];
     
     executionTime = [methodFinish timeIntervalSinceDate:methodStart];
-    NSLog(@"Fast method executionTime = %f", executionTime);
-    NSLog(@"Ville : %@ (%@)", [cities objectAtIndex:0], cities);
+    NSLog(@"Slow method executionTime = %f", executionTime);
+    NSLog(@"Ville : %@", cities);
+    
+    methodStart = [NSDate date];
+    cities = [cityFinder getCitiesFromZipcode:@"37000"];
+    methodFinish = [NSDate date];
+    
+    executionTime = [methodFinish timeIntervalSinceDate:methodStart];
+    NSLog(@"Slow method executionTime = %f (2nd call)", executionTime);
+    NSLog(@"Ville : %@", cities);
 }
 
 - (void)didReceiveMemoryWarning {
