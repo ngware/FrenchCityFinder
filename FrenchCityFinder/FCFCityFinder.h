@@ -13,5 +13,6 @@
 + (id)sharedManager;
 
 - (NSArray*)getCitiesFromZipcode:(NSString*)zipCode;
+- (NSArray*)getCitiesFromZipCodeFast:(NSString*)zipCode;
 
 @end

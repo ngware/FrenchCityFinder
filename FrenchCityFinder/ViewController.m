@@ -18,10 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    FCFCityFinder *cityFinder = [FCFCityFinder sharedManager];
+    FCFCityFinder *cityFinder = nil;
+    NSArray *cities = nil;
+    NSDate *methodStart = nil;
+    NSDate *methodFinish = nil;
+    NSTimeInterval executionTime;
     
-    NSArray *cities = [cityFinder getCitiesFromZipcode:@"75015"];
+    cityFinder = [FCFCityFinder sharedManager];
     
+    methodStart = [NSDate date];
+    cities = [cityFinder getCitiesFromZipCodeFast:@"37000"];
+    methodFinish = [NSDate date];
+    
+    executionTime = [methodFinish timeIntervalSinceDate:methodStart];
+    NSLog(@"Fast method executionTime = %f", executionTime);
+    NSLog(@"Ville : %@ (%@)", [cities objectAtIndex:0], cities);
+    
+    methodStart = [NSDate date];
+    cities = [cityFinder getCitiesFromZipcode:@"37000"];
+    methodFinish = [NSDate date];
+    
+    executionTime = [methodFinish timeIntervalSinceDate:methodStart];
+    NSLog(@"Fast method executionTime = %f", executionTime);
     NSLog(@"Ville : %@ (%@)", [cities objectAtIndex:0], cities);
 }
 
